@@ -34,9 +34,9 @@ load_dotenv()
 os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 
 # API credentials
-SERPAPI_KEY = os.getenv('SERPAPI_KEY', '6fb94540c1e8f7cc71156368346caaa7c1e813ba7c6025a3afe607a97277a8bc')
-FACEPP_API_KEY = os.getenv('FACEPP_API_KEY', 't2f5YL6hGEv6ep01DxEGAic95eSGdU3A')
-FACEPP_API_SECRET = os.getenv('FACEPP_API_SECRET', 'Birv_W6VCMdalf002mRbnlzWY-y7hovk')
+SERPAPI_KEY = os.getenv('SERPAPI_KEY', 'Your-Api-Key')
+FACEPP_API_KEY = os.getenv('FACEPP_API_KEY', 'Your-Api-Key')
+FACEPP_API_SECRET = os.getenv('FACEPP_API_SECRET', 'Your-Api-Key')
 PIMEYES_API_KEY = os.getenv('PIMEYES_API_KEY', 'YOUR_PIMEYES_API_KEY')
 SPIDERFOOT_API_KEY = os.getenv('SPIDERFOOT_API_KEY', 'YOUR_SPIDERFOOT_API_KEY')
 FACEPP_DETECT_URL = 'https://api-us.faceplusplus.com/facepp/v3/detect'
@@ -629,8 +629,8 @@ def run_facepp_analysis(image_path):
         with open(image_path, 'rb') as image_file:
             files = {'image_file': image_file}
             params = {
-                'api_key': t2f5YL6hGEv6ep01DxEGAic95eSGdU3A,
-                'api_secret':Birv_W6VCMdalf002mRbnlzWY-y7hovk,
+                'api_key': Your-Api-Key,
+                'api_secret':Your-Api-Key,
                 'return_attributes': 'gender,age,emotion,facequality,beauty,ethnicity'
             }
             response = requests.post(FACEPP_DETECT_URL, files=files, data=params)
